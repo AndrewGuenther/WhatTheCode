@@ -2,8 +2,14 @@
 
 from flask import Flask
 from flask import render_template
+from flask.ext.assets import Environment
+from flask.ext.assets import Bundle
 
 app = Flask(__name__, static_url_path='')
+assets = Environment(app)
+
+css = Bundle('scss/base.scss', filters='pyscss', output='css/base.css')
+assets.register('css_all', css)
 
 @app.route('/', methods=['GET'])
 def home():
