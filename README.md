@@ -1,4 +1,4 @@
-# WhatTheCode
+# What the Code
 
 For that bad ass one-liner you just wrote.
 
