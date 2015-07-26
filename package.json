@@ -1,0 +1,31 @@
+{
+  "name": "WhatTheCode",
+  "version": "0.0.1",
+  "decription": "For that bad ass one-liner you just wrote.",
+  "main": "server.coffee",
+  "author": "Andrew Guenther",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewGuenther/WTC.git"
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "devDependencies": {
+    "browserify": "^10.1.0",
+    "browserify-shim": "^3.8.6",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-react": "^3.0.1",
+    "gulp-sass": "^1.3.3",
+    "reactify": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "accelerator": "git+https://github.com/AndrewGuenther/Accelerator.git",
+    "express": "^4.12.3",
+    "monk": "^1.0.1"
+  }
+}

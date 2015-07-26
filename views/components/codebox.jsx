@@ -1,10 +1,11 @@
-/** @jsx React.DOM */
 /*
  * - CodeBox
  *   - CodeLine
  *     - CodeElement
  *   - Explanation
  */
+
+var React = require('react');
 
 var CodeBox = React.createClass({
    getInitialState: function() {
@@ -44,6 +45,7 @@ var CodeLine = React.createClass({
             {code.map(function(element, index) {
                return <CodeElement
                          key={index}
+                         index={index}
                          code={element}
                          onCodeElementClick={this.props.onCodeElementClick}
                       />
@@ -55,7 +57,7 @@ var CodeLine = React.createClass({
 
 var CodeElement = React.createClass({
    handleClick: function(e) {
-      this.props.onCodeElementClick(this.props.key);
+      this.props.onCodeElementClick(this.props.index);
    },
    render: function() {
       return (
@@ -75,9 +77,4 @@ var Explanation = React.createClass({
    }
 });
 
-var CODE = {
-   "code": ["wc", "-l"],
-   "explanation": ["The word count tool", "the number of lines"]
-}
-
-React.renderComponent(<CodeBox data={CODE} />, document.getElementById('content'));
+module.exports = CodeBox;
