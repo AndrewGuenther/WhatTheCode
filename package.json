@@ -26,6 +26,8 @@
   "dependencies": {
     "accelerator": "git+https://github.com/AndrewGuenther/Accelerator.git",
     "express": "^4.12.3",
-    "monk": "^1.0.1"
+    "monk": "^1.0.1",
+    "node-jsx": "^0.13.3",
+    "react": "^0.13.3"
   }
 }
