@@ -23,12 +23,12 @@ var CodeBox = React.createClass({
          <div className="code-box-container">
             <div className="code-box">
                <CodeLine
-                  code={this.props.data.code}
+                  code={this.props.code}
                   focusElement={this.state.focusKey}
                   onCodeElementClick={this.handleCodeElementClick}
                />
                <Explanation
-                  explanations={this.props.data.explanation}
+                  explanations={this.props.explanation}
                   focusElement={this.state.focusKey}
                />
             </div>
