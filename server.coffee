@@ -7,6 +7,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('accelerator').createEngine())
 app.use(express.static('public'))
 app.use(require('body-parser').json())
+app.use(require('morgan')('combined'))
 
 require('./routes')(app)
 
