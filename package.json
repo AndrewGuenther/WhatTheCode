@@ -27,7 +27,7 @@
     "accelerator": "git+https://github.com/AndrewGuenther/Accelerator.git",
     "body-parser": "^1.13.3",
     "express": "^4.12.3",
-    "monk": "^1.0.1",
+    "mongoose": "^4.1.0",
     "node-jsx": "^0.13.3",
     "react": "^0.13.3"
   }
