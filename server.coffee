@@ -71,6 +71,7 @@ app.get('/snippet/:snippet_id', (req, res) ->
       res.render('snippet', {
          props: snippet.toObject(),
          head: App.layout.DefaultLayout.Head,
+         head_props: {title: snippet.title},
          post: App.layout.DefaultLayout.Post
       })
    )

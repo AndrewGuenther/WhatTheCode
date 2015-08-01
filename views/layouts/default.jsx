@@ -11,7 +11,7 @@ exports.Head = React.createClass({
    render: function() {
       return (
          <head>
-            <title>What The Code {this.props.title}</title>
+            <title>What The Code{this.props.title && " - " + this.props.title}</title>
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
             <link rel="stylesheet" type="text/css" href="/css/base.css" />
          </head>
