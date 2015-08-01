@@ -47,7 +47,7 @@ app.get('/', (req, res) ->
    )
 )
 
-app.post('/new', (req, res) ->
+app.post('/snippet', (req, res) ->
    Snippet.create({
       title: req.body.title,
       code: req.body.code,
@@ -61,7 +61,7 @@ app.post('/new', (req, res) ->
    )
 )
 
-app.get('/:snippet_id', (req, res) ->
+app.get('/snippet/:snippet_id', (req, res) ->
    Snippet.findById(req.params.snippet_id, (err, snippet) ->
       if err
          console.log(err)

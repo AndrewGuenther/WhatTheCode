@@ -26,7 +26,7 @@ var SnippetList = React.createClass({
 var SnippetItem = React.createClass({
    render: function() {
       return (
-         <a href={ "/" + this.props.id }>{ this.props.title }</a>
+         <a href={ "/snippet/" + this.props.id }>{ this.props.title }</a>
       );
    }
 });
