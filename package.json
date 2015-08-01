@@ -24,7 +24,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "accelerator": "git+https://github.com/AndrewGuenther/Accelerator.git",
+    "accelerator": "^0.1.2",
     "body-parser": "^1.13.3",
     "express": "^4.12.3",
     "mongoose": "^4.1.0",
