@@ -23,11 +23,7 @@ module.exports = (app) ->
    )
 
    app.post('/snippet', (req, res) ->
-      Snippet.create({
-         title: req.body.title,
-         code: req.body.code,
-         explanation: req.body.explanation
-      }, (err) ->
+      Snippet.create(req.body, (err) ->
          if (err)
             console.log(err)
             res.status(400).end()

@@ -23,12 +23,12 @@ var CodeBox = React.createClass({
          <div className="code-box-container">
             <div className="code-box">
                <CodeLine
-                  code={this.props.code}
+                  elements={this.props.elements}
                   focusElement={this.state.focusKey}
                   onCodeElementClick={this.handleCodeElementClick}
                />
                <Explanation
-                  explanations={this.props.explanation}
+                  elements={this.props.elements}
                   focusElement={this.state.focusKey}
                />
             </div>
@@ -39,14 +39,14 @@ var CodeBox = React.createClass({
 
 var CodeLine = React.createClass({
    render: function() {
-      var code = this.props.code;
+      var elements = this.props.elements;
       return (
          <div className="code-line">
-            {code.map(function(element, index) {
+            {elements.map(function(element, index) {
                return <CodeElement
                          key={index}
                          index={index}
-                         code={element}
+                         code={element.code}
                          onCodeElementClick={this.props.onCodeElementClick}
                       />
             }, this)}
@@ -68,7 +68,7 @@ var CodeElement = React.createClass({
 
 var Explanation = React.createClass({
    render: function() {
-      var explanation = this.props.explanations[this.props.focusElement];
+      var explanation = this.props.elements[this.props.focusElement].explanation;
       return (
          <div className="code-explanation">
             {explanation}
