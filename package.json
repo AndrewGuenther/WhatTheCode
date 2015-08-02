@@ -1,7 +1,7 @@
 {
   "name": "WhatTheCode",
   "version": "0.0.1",
-  "decription": "For that bad ass one-liner you just wrote.",
+  "description": "For that bad ass one-liner you just wrote.",
   "main": "server.coffee",
   "author": "Andrew Guenther",
   "license": "MIT",
