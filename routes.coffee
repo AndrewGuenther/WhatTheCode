@@ -33,6 +33,15 @@ module.exports = (app) ->
       )
    )
 
+   app.get('/snippet', (req, res) ->
+      res.render('create-snippet', {
+         head: App.layout.DefaultLayout.Head,
+         head_props: {title: "Create a Snippet"},
+         post: App.layout.DefaultLayout.Post,
+         post_props: {view: 'CreateSnippet'}
+      })
+   )
+
    app.get('/snippet/:snippet_id', (req, res) ->
       Snippet.findById(req.params.snippet_id, (err, snippet) ->
          if err

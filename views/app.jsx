@@ -1,6 +1,7 @@
 exports.views = {
    Homepage: require('./homepage.jsx'),
-   Snippet: require('./snippet.jsx')
+   Snippet: require('./snippet.jsx'),
+   CreateSnippet: require('./create-snippet.jsx')
 }
 
 exports.layout = {
