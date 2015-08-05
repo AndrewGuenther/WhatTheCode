@@ -17,7 +17,8 @@ module.exports = (app) ->
                popular: ({id: doc._id.toString(), title: doc.title} for doc in docs)
             },
             head: App.layout.DefaultLayout.Head,
-            post: App.layout.DefaultLayout.Post
+            post: App.layout.DefaultLayout.Post,
+            post_props: {view: 'Homepage'}
          })
       )
    )
@@ -43,7 +44,8 @@ module.exports = (app) ->
             props: snippet.toObject(),
             head: App.layout.DefaultLayout.Head,
             head_props: {title: snippet.title},
-            post: App.layout.DefaultLayout.Post
+            post: App.layout.DefaultLayout.Post,
+            post_props: {view: 'Snippet'}
          })
       )
    )

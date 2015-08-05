@@ -24,7 +24,13 @@ exports.Post = React.createClass({
          <div>
             <script src="http://fb.me/react-0.13.3.js"></script>
             <script src="/js/components.js"></script>
-            <script src="/js/exports.js"></script>
+            <script dangerouslySetInnerHTML={{__html:
+               "window.WTC = require('wtc');" +
+               "window.onload = function() {" +
+                  "React.render(React.createElement(WTC.views."+this.props.view+", APP_PROPS)," +
+                     "document.getElementById('content'));" +
+               "};"
+            }}/>
          </div>
    )}
 });
